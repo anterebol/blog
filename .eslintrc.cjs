@@ -33,5 +33,6 @@ module.exports = {
   rules: {
     'import/prefer-default-export': 0,
     'react/function-component-definition': 0,
+    '@typescript-eslint/no-unused-vars': 'warn',
   },
 };
