@@ -1,0 +1,32 @@
+.header {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+.header__admin {
+  background: ghostwhite;
+  border-bottom: 2px solid gainsboro;
+}
+.header__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(rgb(239, 236, 236), rgb(149, 147, 147)); */
+  opacity: .3;
+  z-index: 1;
+}
+.header__container {
+  height: 100%;
+  padding: 0 50px;
+  background: none;
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  position: relative;
+}
