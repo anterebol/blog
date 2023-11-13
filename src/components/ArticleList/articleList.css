@@ -1,0 +1,9 @@
+.blog-article-list {
+  display: flex;
+  gap: 5%;
+  /* margin: 15px 30px; */
+  margin: 15px auto;
+  width: 90%;
+  flex-wrap: wrap;
+  /* margin-left: 8%; */
+}
