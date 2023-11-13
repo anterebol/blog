@@ -1,0 +1,6 @@
+footer {
+  height: 100px;
+  background: ghostwhite;
+  border-top: 2px solid gainsboro;
+  position: static;
+}
