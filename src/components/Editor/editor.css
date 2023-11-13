@@ -1,0 +1,31 @@
+.editor-container {
+  width: 100%;
+  padding-left: 50px;
+}
+.add-element__button {
+  /* width: 500px; */
+  padding: 10px 20px;
+  margin: 0 auto;
+  display: flex;
+  border: 2px dashed rgb(17, 69, 133);
+  color: rgb(17, 69, 133);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  font-size: 22px;
+  text-transform: uppercase;
+  background: white;
+  transition: ease 1s;
+}
+.add-element__button:hover {
+  background: rgb(178, 209, 247);
+}
+.add-element__button div {
+  width: 30px;
+  height: 30px;
+}
+.add-element__button div img {
+  width: 100%;
+  height: 100%;
+}
