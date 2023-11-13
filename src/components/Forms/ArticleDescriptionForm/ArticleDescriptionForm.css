@@ -1,0 +1,117 @@
+.description-form {
+  display: grid;
+  /* justify-content: center; */
+  gap: 5px;
+  margin-bottom: 30px;
+}
+.description-form input {
+  width: 80%;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  /* background: ghostwhite; */
+  /* border-bottom: 2px solid gainsboro; */
+  border-radius: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+.description-form input {
+  text-align: center;
+}
+.description-form input::placeholder {
+  color: rgb(137, 134, 134);
+}
+.description-form__img {
+  opacity: 1;
+  transition: ease .3s;
+}
+.description-form__img.hide {
+  opacity: 0;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+.article-main-img {
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 10px;
+  transition: ease .3s;
+}
+.article-main-img > img {
+  border-radius: 20px;
+}
+.datepicker-toggle {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  /* box-shadow: 1px 3px 5px gray; */
+  border-radius: 5px 5px 10px 10px;
+}
+.datepicker-toggle.event-modal {
+  left: 10px;
+}
+.datepicker-toggle-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url('../../../assets/calendar.svg') no-repeat center; */
+  /* background: url('../../../assets/calendar-svgrepo-com.svg') no-repeat center;
+  background-size: cover; */
+  /* z-index: 2; */
+}
+.datepicker-toggle-button > .mounth {
+  background: red;
+  color: white;
+  display: flex;
+  height: 30%;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 1px 3px 5px gray;
+  
+}
+.datepicker-toggle-button > .day {
+  background: rgb(237, 234, 234);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 100%;
+  font-size: 36px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 1px 3px 2px gray;
+}
+.datepicker-toggle-button > .year {
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+}
+.datepicker-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.datepicker-toggle-button ~ .datepicker-input {
+  width: 100%;
+  height: 100%;
+}
+.datepicker-input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
