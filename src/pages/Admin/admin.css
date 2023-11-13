@@ -1,0 +1,14 @@
+.admin-container {
+  display: flex;
+  position: relative;
+}
+.aside-invisible-box {
+  width: 50px;
+}
+.admin-container__main {
+  padding-top: 50px;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
