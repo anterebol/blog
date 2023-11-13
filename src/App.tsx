@@ -8,12 +8,13 @@ import {
   MAIN,
   SLASH,
 } from './constants/pathes/common-pathes';
-import { ADMIN, EDITOR, PREVIEW } from './constants/pathes/admin-pathes';
+import { ADMIN } from './constants/pathes/admin-pathes';
 import {
   PORTFOLIO,
   TRAVEL_BLOG,
   LIVE_TOPICS,
-} from './constants/pathes/user-pathes';
+  GALLERY,
+} from './constants/pathes/private-pathes';
 import { createDynamicPath } from './utils/createDynamicPath';
 import { Admin } from './pages/Admin/Admin';
 
@@ -24,13 +25,23 @@ function App() {
       <Route path={MAIN} element={<Main />} />
       <Route path={LOGIN} element={LOGIN} />
       <Route path={ADMIN} element={<Admin />} />
-      <Route path={EDITOR} element={EDITOR} />
-      <Route path={PREVIEW} element={PREVIEW} />
+      <Route path={ADMIN} element={<Admin />}>
+        <Route path=":page" element={<Admin />}>
+          <Route path=":id" element={<Admin />} />
+        </Route>
+      </Route>
       <Route path={PORTFOLIO} element={PORTFOLIO} />
+      <Route path={GALLERY} element={GALLERY} />
       <Route path={LIVE_TOPICS} element={LIVE_TOPICS} />
-      <Route path={createDynamicPath(LIVE_TOPICS)} element={LIVE_TOPICS} />
+      <Route
+        path={createDynamicPath(LIVE_TOPICS, 'id')}
+        element={LIVE_TOPICS}
+      />
       <Route path={TRAVEL_BLOG} element={TRAVEL_BLOG} />
-      <Route path={createDynamicPath(TRAVEL_BLOG)} element={TRAVEL_BLOG} />
+      <Route
+        path={createDynamicPath(TRAVEL_BLOG, 'id')}
+        element={TRAVEL_BLOG}
+      />
       <Route path={NOT_FOUND} element={<Error />} />
     </Routes>
   );

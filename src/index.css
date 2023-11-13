@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  /* overflow: hidden; */
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  position: relative;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(183, 181, 180);
+  border-radius: 20px;
+  border: none;
+}
+body::-webkit-scrollbar-track {
+  background: rgb(247, 248, 248);
+}
+li {
+  list-style: none;
+}
+#root {
+  height: 100%;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}

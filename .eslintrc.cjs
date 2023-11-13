@@ -34,5 +34,6 @@ module.exports = {
     'import/prefer-default-export': 0,
     'react/function-component-definition': 0,
     '@typescript-eslint/no-unused-vars': 'warn',
+    'jsx-a11y/anchor-is-valid': 0,
   },
 };

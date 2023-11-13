@@ -5,12 +5,15 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import { store } from './store/configReducer';
+import { Private } from './hoc/Private/Private';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store()}>
-        <App />
+        <Private>
+          <App />
+        </Private>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>
