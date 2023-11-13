@@ -1,0 +1,181 @@
+.main-page {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.main-page__container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.scroll {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  z-index: 10;
+  color: rgb(112, 109, 109);
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0.1;
+  animation: scroll-down 2s 1s;
+  animation-iteration-count: infinite;
+}
+.unvisible {
+  opacity: 0;
+  animation: scroll-unvisible 1s 0s ;
+  animation-iteration-count: 1;
+}
+.scroll__img {
+  width: 40px;
+  height: 40px;
+}
+.scroll__img > img {
+  width: 100%;
+  height: 100%;
+}
+@keyframes scroll-down {
+  0%{
+    opacity: 0.1;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0.1
+  }
+}
+@keyframes scroll-unvisible {
+  0%{
+    opacity: 0.1;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0
+  }
+}
+.parallax {
+  position: relative;
+  height: 100%;
+}
+.parallax__mountain {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.parallax__mountain-1 {
+  background: url('../../assets/main/m_1.png') no-repeat center;
+  background-size: cover;
+}
+.parallax__fog {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: url('../../assets/main/fog_1.png') bottom no-repeat;
+  /* background-size: cover; */
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.parallax__mountain-2 {
+  background: url('../../assets/main/m_2.png') bottom right / 45%  no-repeat;
+  /* background-size: contain; */
+  /* width: 50%; */
+  /* right: 0; */
+  z-index: 1;
+}
+.parallax__mountain-3 {
+  z-index: 1;
+  background: url('../../assets/main/m_3.png') left bottom / 100% no-repeat;
+  /* background-size: contain; */
+}
+.main-content {
+  position: relative;
+  top: -150px;
+  z-index: 0;
+  opacity: 0;
+  height: 1000px;
+}
+.main-content__body {
+  max-width: 50%;
+  margin: 0 auto;
+}
+.main-content__header {
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.main-content__title {
+  font-size: 100px;
+}
+.main-content__text {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.main-content__article {
+  /* height: 2000px; */
+  padding-bottom: 200px;
+}
+/* .main-header__section:hover {
+  background: url('../../assets/main/main-mountain.jpg') no-repeat bottom;
+  background-size: cover;
+} */
+/* .main-sun {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 15%;
+  top: 10%;
+  background: orange;
+  z-index: 1;
+  opacity: .8;
+  box-shadow: 0 0 20px 10px orange;
+  border-radius: 50%;
+  animation: sun 5s infinite 1s;
+} */
+/* @keyframes sun {
+  0% {
+    box-shadow: 0 0 20px 10px orange;
+  }
+  50% {
+    box-shadow: 0 0 30px 20px orange;
+  }
+  100% {
+    box-shadow: 0 0 20px 10px orange;
+  }
+} */
+
+/* .main-title {
+  color: white;
+  font-weight: 700;
+  font-size: 42px;
+  margin-left: 10%;
+  padding-top: 200px;
+}
+.main__content {
+  color: white;
+  height: 500px;
+  top: 300px;
+  max-width: 500px;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+.lorem {
+  position: absolute;
+  top: 500px;
+  transition: ease 5s;
+}
+.main-container:hover .lorem {
+  top: -300px;
+} */
