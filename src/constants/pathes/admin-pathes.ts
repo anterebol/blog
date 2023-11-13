@@ -1,6 +1,9 @@
-export const ADMIN_PATHES = {
-  ADMIN: 'admin',
-  EDITOR: 'editor',
-  PREVIEW: 'preview',
+import { LIVE_TOPICS, PORTFOLIO, TRAVEL_BLOG, GALLERY } from './private-pathes';
+
+export const ADMIN_ASIDE_BAR = {
+  TRAVEL_BLOG,
+  LIVE_TOPICS,
+  PORTFOLIO,
+  GALLERY,
 };
-export const { ADMIN, EDITOR, PREVIEW } = ADMIN_PATHES;
+export const ADMIN = 'admin';
