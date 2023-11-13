@@ -1,0 +1,106 @@
+.side-bar {
+  /* padding: 10px 0px 0 0px; */
+  background: ghostwhite;
+  border-right: 2px solid gainsboro;
+  width: 50px;
+  transition: ease 1s;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+}
+.side-bar.open {
+  width: 150px;
+  /* padding: 10px 5px;  */
+}
+.side-bar__list {
+  position: relative;
+  width: 50px;
+  overflow: hidden;
+  transition: ease 1s;
+  margin-top: 40px;
+}
+.side-bar__list.open {
+  width: 150px;
+  /* justify-content: left; */
+}
+.side-bar__link {
+  transition: ease 1s;
+  color: black;
+  display: block;
+  border-radius: 5px;
+  padding: 10px 0px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.side-bar__list.open > li > .side-bar__link {
+  padding: 10px 5px;
+  justify-content: flex-start;
+}
+.side-bar__link:hover {
+  background: rgb(216, 216, 216);
+  cursor: pointer;
+}
+.side-bar__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.links-bar  {
+  height: 0;
+  /* position: relative; */
+  margin-left: 20px;
+  overflow: hidden;
+  transition: ease .1s;
+}
+.side-bar__button {
+  position: absolute;
+  background: none;
+  transition: ease 1s;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 5px; */
+  align-items: center;
+  box-sizing: content-box;
+  width: 40px;
+  height: 40px;
+  right: 3px;
+  top: 5px;
+}
+.side-bar__button.opened {
+  right: 5px;
+}
+.side-bar__button:hover {
+  background: rgb(216, 216, 216);
+}
+.side-bar__button-line {
+  position: absolute;
+  width: 30px;
+  left: 5px;
+  height: 4px;
+  /* margin: 3px 0; */
+  background: orange;
+  transition: ease 1s;
+  
+}
+.side-bar__button > .line-1 {
+  top: 8px;
+}
+.side-bar__button > .line-3 {
+  bottom: 8px;
+}
+.side-bar__button.opened > .line-1 {
+  transform: rotate(-45deg);
+  top: 18px;
+}
+.side-bar__button.opened > .line-2 {
+  transform: rotate(-45deg);
+  /* top: 18px; */
+}
+.side-bar__button.opened > .line-3 {
+  transform: rotate(45deg);
+  top: 18px;
+}
