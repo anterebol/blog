@@ -4,6 +4,7 @@ import { getRole, setLocalStorage } from '../../utils/localStorage';
 
 const initialState = {
   role: getRole('role') || ROLE_GUEST,
+  openAsideEditor: false,
 };
 
 const appSlice = createSlice({
@@ -14,8 +15,11 @@ const appSlice = createSlice({
       setLocalStorage('role', payload);
       state.role = payload;
     },
+    toggleAsideEditor: (state) => {
+      state.openAsideEditor = !state.openAsideEditor;
+    },
   },
 });
 
 export default appSlice.reducer;
-export const { setRole } = appSlice.actions;
+export const { setRole, toggleAsideEditor } = appSlice.actions;
