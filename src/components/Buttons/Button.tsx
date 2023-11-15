@@ -1,13 +1,13 @@
 import { joinClasses } from '../../utils/joinClasses';
 
 export const Button = ({
-  type = 'button',
+  type,
   cls,
   title,
   func,
   text,
 }: {
-  type: string;
+  type?: string;
   cls: Array<string>;
   title: string;
   func: () => void;
@@ -15,7 +15,7 @@ export const Button = ({
 }) => {
   return (
     <button
-      type={type}
+      type={type || 'button'}
       className={joinClasses(cls)}
       onClick={() => {
         func();

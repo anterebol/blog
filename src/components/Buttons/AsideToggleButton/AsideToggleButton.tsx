@@ -1,4 +1,4 @@
-import { joinClasses } from "../../../utils/joinClasses";
+import { joinClasses } from '../../../utils/joinClasses';
 
 export const AsideToggleButton = ({
   func,

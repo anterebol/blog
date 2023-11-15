@@ -1,21 +1,23 @@
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { toggleAsideEditor } from '../../store/appReducer/appReducer';
+import { joinClasses } from '../../utils/joinClasses';
+import { AsideToggleButton } from '../Buttons/AsideToggleButton/AsideToggleButton';
 import './asidePopupEditor.css';
 
 export const AsidePopupEditor = () => {
-  const openBar = true;
+  const dispatch = useAppDispatch();
+  const { openAsideEditor } = useAppSelector((state) => state.appReducer);
+
   return (
-    <div className="popup">
+    <div className={joinClasses(['popup', openAsideEditor ? 'opened' : ''])}>
       <div className="popup__cover" />
       <div className="popup__body">
-        <button
-          type="button"
-          className={['side-bar__button', openBar ? 'opened' : ''].join(' ')}
-          // onClick={() => setOpenBar(!openBar)}
-          title="Open"
-        >
-          <div className="side-bar__button-line line-1" />
-          <div className="side-bar__button-line line-2" />
-          <div className="side-bar__button-line line-3" />
-        </button>
+        <AsideToggleButton
+          func={() => {
+            dispatch(toggleAsideEditor());
+          }}
+          cls={['side-bar__button', 'opened']}
+        />
       </div>
     </div>
   );
