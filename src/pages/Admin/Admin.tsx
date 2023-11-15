@@ -7,11 +7,11 @@ import { AsidePopupEditor } from '../../components/AsidePopupEditor/AsidePopupEd
 
 export function Admin() {
   const { page, id } = useParams();
-  console.log(page, id);
+
   return (
     <div className="admin-container">
       <SideBar />
-      {/* <AsidePopupEditor /> */}
+      <AsidePopupEditor />
       <div className="aside-invisible-box" />
       <div className="admin-container__main">
         {page && id ? <Editor /> : <ArticleList />}
