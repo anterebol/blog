@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { toUpperFirstLetter } from '../../utils/toUpperFirstLetter';
+import { joinClasses } from '../../utils/joinClasses';
 
 const Link = ({
   link,
@@ -13,8 +14,8 @@ const Link = ({
   children?: JSX.Element;
 }) => {
   return (
-    <NavLink className={cls?.join(' ')} to={link}>
-      {children}
+    <NavLink className={joinClasses(cls)} to={link}>
+      {children || null}
       {toUpperFirstLetter(name)}
     </NavLink>
   );

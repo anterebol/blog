@@ -35,5 +35,6 @@ module.exports = {
     'react/function-component-definition': 0,
     '@typescript-eslint/no-unused-vars': 'warn',
     'jsx-a11y/anchor-is-valid': 0,
+    'react/require-default-props': 0,
   },
 };
