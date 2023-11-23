@@ -1,6 +1,6 @@
 import { joinClasses } from '../../../utils/joinClasses';
 
-export const AsideToggleButton = ({
+export const ToggleButton = ({
   func,
   cls,
 }: {
@@ -14,11 +14,11 @@ export const AsideToggleButton = ({
       onClick={() => {
         func();
       }}
-      title="Toggle aside bar"
+      title="Toggle button"
     >
-      <div className="side-bar__button-line line-1" />
-      <div className="side-bar__button-line line-2" />
-      <div className="side-bar__button-line line-3" />
+      <div className="toggle__button-line line-1" />
+      <div className="toggle__button-line line-2" />
+      <div className="toggle__button-line line-3" />
     </button>
   );
 };

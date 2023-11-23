@@ -1,0 +1,25 @@
+.small {
+  /* width: 50px; */
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.save-button {
+  color: white;
+  background: rgb(20, 104, 200);
+}
+.reset-button {
+  color: white;
+  background: rgb(255, 145, 0);
+}
+.delete-button {
+  width: 35px;
+}
+.add-element {
+  width: 25px;
+  height: 25px;
+}
+.view-button {
+  width: 25px;
+  height: 25px;
+}

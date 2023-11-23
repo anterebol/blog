@@ -1,0 +1,12 @@
+.rotate-img {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  transition: ease .4s;
+  cursor: pointer;
+}
+.rotate-img:hover {
+  transform: rotate(-90deg);
+}
