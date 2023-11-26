@@ -14,7 +14,7 @@ export const ToggleButton = ({
       onClick={() => {
         func();
       }}
-      title="Toggle button"
+      title="Close button"
     >
       <div className="toggle__button-line line-1" />
       <div className="toggle__button-line line-2" />

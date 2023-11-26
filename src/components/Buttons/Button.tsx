@@ -18,7 +18,7 @@ export const Button = ({
 }) => {
   return (
     <button
-      type={type || 'button'}
+      type={type | 'button'}
       className={joinClasses(cls)}
       onClick={() => {
         func();

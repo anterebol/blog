@@ -13,7 +13,29 @@
   background: rgb(255, 145, 0);
 }
 .delete-button {
-  width: 35px;
+  
+  position: relative;
+  transition: ease .5s;
+  opacity: .7;
+}
+.delete-button:hover {
+  opacity: 1;
+}
+.add-list-item {
+  width: 22px;
+  height: 22px;
+  opacity: .7;
+  transition: ease .5s;
+}
+.add-list-item:hover {
+  opacity: 1;
+}
+.edit-button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  top: 8px;
 }
 .add-element {
   width: 25px;
@@ -23,3 +45,11 @@
   width: 25px;
   height: 25px;
 }
+.remove-button {
+  width: 25px;
+  height: 25px;
+}
+/* .toggle__button.opened:hover {
+  transform: rotate(180deg);
+  opacity: 1;
+} */

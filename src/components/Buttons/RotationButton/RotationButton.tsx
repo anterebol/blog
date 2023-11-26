@@ -11,7 +11,7 @@ export const RotationButton = ({
   return (
     <button
       type="button"
-      className="rotate-img"
+      className="rotate-button"
       onClick={() => {
         func();
       }}

@@ -1,12 +1,12 @@
-.rotate-img {
+.rotate-button {
   position: absolute;
-  right: 50px;
+  right: 40px;
   top: 10px;
   height: 30px;
   width: 30px;
   transition: ease .4s;
   cursor: pointer;
 }
-.rotate-img:hover {
+.rotate-button:hover {
   transform: rotate(-90deg);
 }
