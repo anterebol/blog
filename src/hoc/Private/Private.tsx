@@ -1,10 +1,9 @@
 import './private.css';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { MAIN } from '../../constants/pathes/common-pathes';
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { useAppSelector } from '../../hooks/hooks';
-// import { ROLE_GUEST } from '../../constants/role/role';
 
 export const Private = (props: { children: JSX.Element }) => {
   const { children } = props;
@@ -22,7 +21,7 @@ export const Private = (props: { children: JSX.Element }) => {
       >
         {children}
       </main>
-      <Footer />
+      {location.pathname.includes(MAIN) ? null : <Footer />}
     </>
   );
 };
