@@ -8,6 +8,7 @@
   height: 100%;
   z-index: 1;
 }
+
 .side-bar.open {
   width: 150px;
   /* padding: 10px 5px;  */
@@ -17,7 +18,7 @@
   width: 50px;
   overflow: hidden;
   transition: ease 1s;
-  margin-top: 40px;
+  margin-top: 45px;
 }
 .side-bar__list.open {
   width: 150px;
@@ -54,7 +55,7 @@
   overflow: hidden;
   transition: ease .1s;
 }
-.side-bar__button {
+.toggle__button {
   position: absolute;
   background: none;
   transition: ease 1s;
@@ -70,13 +71,17 @@
   right: 3px;
   top: 5px;
 }
-.side-bar__button.opened {
+.toggle__button.opened {
   right: 5px;
 }
-.side-bar__button:hover {
+.side-bar .toggle__button:hover {
   background: rgb(216, 216, 216);
+  opacity: 1;
 }
-.side-bar__button-line {
+.several-images__item > .toggle__button:hover {
+  background: none;
+}
+.toggle__button-line {
   position: absolute;
   width: 30px;
   left: 5px;
@@ -86,21 +91,21 @@
   transition: ease 1s;
   
 }
-.side-bar__button > .line-1 {
+.toggle__button > .line-1 {
   top: 8px;
 }
-.side-bar__button > .line-3 {
+.toggle__button > .line-3 {
   bottom: 8px;
 }
-.side-bar__button.opened > .line-1 {
+.toggle__button.opened > .line-1 {
   transform: rotate(-45deg);
   top: 18px;
 }
-.side-bar__button.opened > .line-2 {
+.toggle__button.opened > .line-2 {
   transform: rotate(-45deg);
   /* top: 18px; */
 }
-.side-bar__button.opened > .line-3 {
+.toggle__button.opened > .line-3 {
   transform: rotate(45deg);
   top: 18px;
 }
