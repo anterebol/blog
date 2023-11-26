@@ -1,14 +1,14 @@
-import textIcon from '../../assets/editorIcons/add-text.svg';
-import imageIcon from '../../assets/editorIcons/add-image.svg';
-import listIcon from '../../assets/editorIcons/list.svg';
-import lineIcon from '../../assets/editorIcons/line.svg';
-import sliderIcon from '../../assets/editorIcons/slider.svg';
-import h1 from '../../assets/editorIcons/h1.svg';
-import h2 from '../../assets/editorIcons/h2.svg';
-import h3 from '../../assets/editorIcons/h3.svg';
-import h5 from '../../assets/editorIcons/h5.svg';
-import zeroBlockIcon from '../../assets/editorIcons/zero-block.svg';
-import addImages from '../../assets/editorIcons/add-images.svg';
+import textIcon from '../../assets/editor/editorIcons/add-text.svg';
+import imageIcon from '../../assets/editor/editorIcons/add-image.svg';
+import listIcon from '../../assets/editor/editorIcons/list.svg';
+import lineIcon from '../../assets/editor/editorIcons/line.svg';
+import sliderIcon from '../../assets/editor/editorIcons/slider.svg';
+import h1 from '../../assets/editor/editorIcons/h1.svg';
+import h2 from '../../assets/editor/editorIcons/h2.svg';
+import h3 from '../../assets/editor/editorIcons/h3.svg';
+import h5 from '../../assets/editor/editorIcons/h5.svg';
+import htmlIcon from '../../assets/editor/editorIcons/html.svg';
+import addImages from '../../assets/editor/editorIcons/add-images.svg';
 
 export const editorIcons = {
   text: [
@@ -76,12 +76,12 @@ export const editorIcons = {
       defaultClasses: ['defaylt-list'],
     },
   ],
-  'zero block': [
+  html: [
     {
-      icon: zeroBlockIcon,
-      title: 'block',
-      tag: 'div',
-      defaultClasses: ['zero-block'],
+      icon: htmlIcon,
+      title: 'html',
+      tag: 'html',
+      defaultClasses: ['html-block'],
     },
   ],
   line: [
