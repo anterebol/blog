@@ -1,6 +1,6 @@
 import './newArticle.css';
 import { Link, useParams } from 'react-router-dom';
-import plus from '../../../assets/plus.svg';
+import plus from '../../../assets/editor/plus.svg';
 
 export const NewArticle = () => {
   const { page } = useParams();

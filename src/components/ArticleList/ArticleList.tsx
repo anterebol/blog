@@ -1,6 +1,8 @@
 import './articleList.css';
+import { useLocation } from 'react-router-dom';
 import { ArticleItem } from './ArticleItem/ArticleItem';
 import { NewArticle } from './NewArticle/NewArticle';
+import { ADMIN } from '../../constants/pathes/admin-pathes';
 
 export const ArticleList = () => {
   const articles = [
@@ -37,11 +39,17 @@ export const ArticleList = () => {
       img: 'https://sun9-5.userapi.com/impg/c857620/v857620967/13212d/3mYDwl_Szrc.jpg?size=1333x750&quality=96&sign=706adfacd0b6b04ad0da12ef6399a02b&type=album',
     },
   ];
+  const { pathname } = useLocation();
+  const [, page, pagePath] = pathname.split('/');
   return (
     <ul className="blog-article-list">
-      <NewArticle />
+      {page === ADMIN ? <NewArticle /> : null}
       {articles.map((article) => (
-        <ArticleItem key={article.id} article={article} />
+        <ArticleItem
+          path={{ page, pagePath }}
+          key={article.id}
+          article={article}
+        />
       ))}
     </ul>
   );

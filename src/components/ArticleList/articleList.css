@@ -1,9 +1,7 @@
 .blog-article-list {
   display: flex;
-  gap: 5%;
-  /* margin: 15px 30px; */
-  margin: 15px auto;
-  width: 90%;
+  gap: 30px 2%;
+  margin: 40px auto;
+  width: 100%;
   flex-wrap: wrap;
-  /* margin-left: 8%; */
 }

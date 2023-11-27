@@ -1,45 +1,80 @@
 .blog-article-list__item {
   position: relative;
-  width: 30%;
+  width: 32%;
   border-radius: 5px;
-  cursor: pointer;
   font-family: 'Roboto';
-  padding: 5px;
   text-align: center;
-  margin-bottom: 25px;
 }
-.blog-article-list__item-cover:hover {
-  opacity: .2;
-  box-shadow: 1px 1px 5px 0 black;
+.blog-article-list__item-link {
+  transition: ease .5s;
 }
-.blog-article-list__item-cover {
-  opacity: 0;
-  position: absolute;
-  background: rgb(230, 228, 228);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  transition: ease 1s;
+.blog-article-list__item-link:hover {
+  opacity: .6;
+}
+.image-link {
+  transition: ease .5s;
+}
+.image-link:hover {
+  opacity: .8;
 }
 .blog-article-list__item-img {
   margin-bottom: 15px;
   width: 100%;
-  /* width: 100%;
-  height: 150px; */
 }
 .blog-article-list__item-img > img {
-  height: auto;
-  max-width: 100%;
-  border-radius: 3px;
+  border-radius: 5px;
+}
+.blog-article-list__item-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: #313131;
+}
+.blog-article-list__item-date {
+  font-family: 'Lato', sans-serif;
+  margin: 12px 0 0;
+  opacity: .5;
+  font-size: 14px;
+}
+.article-line {
+  width: 60px;
+  height: 1px;
+  background: #ff8a65;
+  margin: 0 auto;
+  margin-top: 17px;
+  margin-bottom: 18px;
+}
+.blog-article-list__item-description {
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 21px;
+}
+.button__read-more {
+  background-color: #ff8a65;
+  color: #fff;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: inline-block;
+}
+.angle-double-right {
+  margin-left: 5px;
+  display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font: normal normal normal 18px;
+}
+.angle-double-right::before {
+  width: 30px;
+  height: 30px;
+  content: "\00BB";
 }
 @media (max-width: 1250px) {
   .blog-article-list__item {
     width: 48%;
   }
   .blog-article-list {
-    gap: 4%;
+    gap: 30px 4%;
   }
 }
 @media (max-width: 800px) {
@@ -48,6 +83,6 @@
   }
   .blog-article-list {
     justify-content: center;
-    gap: 0;
+    gap: 30px;
   }
 }

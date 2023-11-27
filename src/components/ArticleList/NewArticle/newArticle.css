@@ -1,12 +1,10 @@
 .new-article {
   border: 2px dashed rgb(17, 69, 133);
-  width: 30%;
+  width: 32%;
   cursor: pointer;
   position: relative;
-  /* height: 100%; */
   border-radius: 5px;
   background: none;
-  margin-bottom: 25px;
 }
 .new-article > a {
   width: 100%;
@@ -34,7 +32,7 @@
 .new-article__cover > p {
   width: 100%;
   font-size: 24px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .new-article:hover > a > .new-article__cover {
   opacity: 1;
