@@ -1,5 +1,4 @@
 .small {
-  /* width: 50px; */
   font-size: 12px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -36,6 +35,14 @@
   position: absolute;
   right: 5px;
   top: 8px;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: content-box;
+  background: white;
+}
+.edit-button:hover {
+  background: white;
 }
 .add-element {
   width: 25px;
@@ -49,7 +56,3 @@
   width: 25px;
   height: 25px;
 }
-/* .toggle__button.opened:hover {
-  transform: rotate(180deg);
-  opacity: 1;
-} */

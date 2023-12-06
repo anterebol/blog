@@ -5,15 +5,13 @@ export const ToggleButton = ({
   cls,
 }: {
   func: () => void;
-  cls: Array<string>;
+  cls?: Array<string>;
 }) => {
   return (
     <button
       type="button"
       className={joinClasses(cls)}
-      onClick={() => {
-        func();
-      }}
+      onClick={func}
       title="Close button"
     >
       <div className="toggle__button-line line-1" />

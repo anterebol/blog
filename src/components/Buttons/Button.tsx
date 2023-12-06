@@ -1,31 +1,27 @@
+import { ButtonType } from '../../types/buttonType';
 import { joinClasses } from '../../utils/joinClasses';
 import './button.css';
 
 export const Button = ({
-  type,
   cls,
   title,
   func,
   text,
   src,
-}: {
-  type?: string;
-  cls: Array<string>;
-  title: string;
-  func: () => void;
-  text?: string;
-  src?: string;
-}) => {
+  children,
+}: ButtonType) => {
   return (
     <button
-      type={type | 'button'}
+      type="button"
       className={joinClasses(cls)}
-      onClick={() => {
+      onClick={(e) => {
+        e.stopPropagation();
         func();
       }}
       title={title}
     >
       {text || (src ? <img src={src} alt={title} /> : null)}
+      {children}
     </button>
   );
 };

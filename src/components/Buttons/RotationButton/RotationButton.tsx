@@ -1,13 +1,7 @@
 import './rotationButton.css';
 import reboot from '../../../assets/reboot.svg';
 
-export const RotationButton = ({
-  func,
-  cls,
-}: {
-  func: () => void;
-  cls: Array<string>;
-}) => {
+export const RotationButton = ({ func }: { func: () => void }) => {
   return (
     <button
       type="button"
