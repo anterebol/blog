@@ -4,10 +4,10 @@ import travelImg from '../../assets/asideBar/travel.svg';
 import liveImg from '../../assets/asideBar/live.svg';
 import {
   GALLERY,
-  LIVE_TOPICS,
-  PORTFOLIO,
   TRAVEL_BLOG,
-} from '../pathes/private-pathes';
+  PORTFOLIO,
+  LIVE_TOPICS,
+} from '../pathes/navPathes';
 
 export const sideBarImages = {
   gallery: {
@@ -26,4 +26,4 @@ export const sideBarImages = {
     img: liveImg,
     alt: LIVE_TOPICS,
   },
-};
+} as unknown as { [key: string]: { img: string; alt: string } };

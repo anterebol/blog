@@ -16,7 +16,6 @@ export const editorIcons = {
       icon: textIcon,
       title: 'text',
       tag: 'p',
-      defaultClasses: ['default-text'],
     },
   ],
   title: [
@@ -24,25 +23,21 @@ export const editorIcons = {
       icon: h1,
       title: 'title',
       tag: 'h1',
-      defaultClasses: ['default-title'],
     },
     {
       icon: h2,
       tag: 'h2',
       title: 'subtitle',
-      defaultClasses: ['default-title'],
     },
     {
       icon: h3,
       tag: 'h3',
       title: 'middle',
-      defaultClasses: ['default-title'],
     },
     {
       icon: h5,
       tag: 'h5',
       title: 'small',
-      defaultClasses: ['default-title'],
     },
   ],
   image: [
@@ -50,20 +45,17 @@ export const editorIcons = {
       icon: imageIcon,
       title: 'image',
       tag: 'img',
-      defaultClasses: ['default-img'],
     },
     {
       icon: addImages,
       title: 'images',
       tag: 'images',
-      defaultClasses: ['default-images'],
       ul: [],
     },
     {
       icon: sliderIcon,
       title: 'slider',
       tag: 'slider',
-      defaultClasses: ['default-slider'],
       ul: [],
     },
   ],
@@ -73,7 +65,6 @@ export const editorIcons = {
       title: 'list',
       ul: ['Example text...'],
       tag: 'ul',
-      defaultClasses: ['defaylt-list'],
     },
   ],
   html: [
@@ -81,7 +72,6 @@ export const editorIcons = {
       icon: htmlIcon,
       title: 'html',
       tag: 'html',
-      defaultClasses: ['html-block'],
     },
   ],
   line: [
@@ -89,7 +79,6 @@ export const editorIcons = {
       icon: lineIcon,
       title: 'line',
       tag: 'line',
-      defaultClasses: ['blog-line'],
     },
   ],
 };

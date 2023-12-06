@@ -1,4 +1,4 @@
-import { LIVE_TOPICS, PORTFOLIO, TRAVEL_BLOG, GALLERY } from './private-pathes';
+import { LIVE_TOPICS, PORTFOLIO, TRAVEL_BLOG, GALLERY } from './navPathes';
 
 export const ADMIN_ASIDE_BAR = {
   TRAVEL_BLOG,
