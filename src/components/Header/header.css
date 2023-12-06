@@ -1,13 +1,54 @@
-.header {
+header {
+  position: relative;
+  top: 0;
   height: 80px;
+  width: 100%;
+  z-index: 6;
+  background: black;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__admin .header__logo {
+  opacity: 0;
+  visibility: hidden;
+}
+.header__main .header__logo {
+  color: orange;
+}
+.header__logo {
+  transition: ease .4s;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  gap: 10px;
+  opacity: 1;
+  visibility: visible;
+}
+.header__logo-text {
+  text-transform: uppercase;
+  font-weight: 500;
+  max-height: 40px;
+}
+.header__admin, .header__main {
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 4;
+  background: none;
 }
 .header__admin {
-  background: ghostwhite;
+  background: ghostwhite ;
   border-bottom: 2px solid gainsboro;
+}
+.header .header__container {
+  background: black;
+}
+.header__main .header__container {
+  background: none;
+}
+.header__admin .header__container {
+  background: ghostwhite;
 }
 .header__cover {
   position: absolute;
@@ -15,7 +56,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* background: linear-gradient(rgb(239, 236, 236), rgb(149, 147, 147)); */
   opacity: .3;
   z-index: 1;
 }
@@ -24,9 +64,57 @@
   padding: 0 50px;
   background: none;
   display: flex;
-  color: black;
+  color: white;
   justify-content: space-between;
   align-items: center;
   z-index: 5;
   position: relative;
+}
+
+.nav-btn {
+  position: static;
+  background: none;
+  border-radius: 50%;
+  z-index: 10;
+  box-sizing: content-box;
+  display: none;
+}
+.nav-btn > .toggle__button-line {
+  position:static;
+}
+.nav-btn:hover {
+  opacity: .9;
+}
+@media (max-width: 1000px) {
+  .header__nav {
+    display: none;
+  }
+  .nav-btn {
+    display: block;
+  }
+  .nav-btn > div {
+    margin: 5px;
+  }
+  .nav-btn:hover {
+    opacity: .8;
+  }
+  .header__container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  .header__logo-text {
+    font-size: 16px;
+  }
+  .nav {
+    gap: 10px !important;
+    font-size: 14px;
+  }
+  .header__nav {
+    max-width: 100% !important;
+  }
+  .header__container {
+    height: 100%;
+    /* padding: 0 20px; */
+  }
 }
