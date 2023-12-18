@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { DEFAULT_IMG_POPUP } from '../../constants/defaultPopupImg/defaultPopupImg';
+/* eslint-disable no-param-reassign */
 import { initialDate } from '../../constants/initialDate/initialDate';
 import { ROLE_GUEST } from '../../constants/role/role';
 import { getRole, setLocalStorage } from '../../utils/localStorage';
@@ -12,6 +14,8 @@ const initialState = {
   openedPreview: false,
   editorPageItems:
     JSON.parse(localStorage.getItem('editorPageItems') as string) || [],
+  galleryPopupImg: { ...DEFAULT_IMG_POPUP },
+  openedAsideNav: false,
 };
 
 const appSlice = createSlice({
@@ -30,69 +34,26 @@ const appSlice = createSlice({
     },
     openPreview: (state) => {
       state.openedPreview = true;
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add('open-preview');
     },
     closePreview: (state) => {
       state.openedPreview = false;
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.remove('open-preview');
     },
-    addDefaultElement: (state, { payload }) => {
-      state.editorPageItems.push(payload);
-      state.openAsideEditor = false;
+    toggleGalleryPopup: (
+      state,
+      { payload }: { payload: { src: string; title: string } }
+    ) => {
+      state.galleryPopupImg = { ...payload };
     },
-    setArticleDate: (state, { payload }) => {
-      state.articleMainInfo.date = { ...payload };
+    toggleAsideNav: (state) => {
+      state.openedAsideNav = !state.openedAsideNav;
     },
-    setArticleTitle: (state, { payload }) => {
-      state.articleMainInfo.title = payload;
-    },
-    setArticleImg: (state, { payload }) => {
-      state.articleMainInfo.mainImg = payload;
-    },
-    setEditorText: (state, { payload }) => {
-      const { id, text } = payload;
-      const currentEditor = [...state.editorPageItems];
-      currentEditor[id].text = text;
-      state.editorPageItems = [...currentEditor];
-    },
-    setEditorImage: (state, { payload }) => {
-      const { id, src, rotation } = payload;
-      const currentEditor = [...state.editorPageItems];
-      currentEditor[id].src = src;
-      currentEditor[id].rotation = rotation;
-      state.editorPageItems = [...currentEditor];
-    },
-    setImageRotation: (state, { payload }) => {
-      const { id, rotation } = payload;
-      state.editorPageItems[id].rotation = rotation;
-    },
-    setEditorList: (state, { payload }) => {
-      const { index, list } = payload;
-      const currentEditor = [...state.editorPageItems];
-      currentEditor[index].ul = [...list];
-      state.editorPageItems = [...currentEditor];
-    },
-    removeEditorItem: (state, { payload }) => {
-      const { id } = payload;
-      const index = parseInt(id, 10);
-      const currentPage = [...state.editorPageItems];
-      currentPage.splice(index, 1);
-      state.editorPageItems = [...currentPage];
-    },
-    savePage: (state) => {
-      localStorage.setItem(
-        'editorPageItems',
-        JSON.stringify(state.editorPageItems)
-      );
-      localStorage.setItem(
-        'mainAricleInfo',
-        JSON.stringify(state.articleMainInfo)
-      );
-    },
-    resetChanges: (state) => {
-      state.editorPageItems =
-        JSON.parse(localStorage.getItem('editorPageItems') as string) || [];
-      state.articleMainInfo =
-        JSON.parse(localStorage.getItem('mainAricleInfo') as string) || [];
-    },
+    // closeAsideEditor: (state) => {
+    //   state.openAsideEditor = false;
+    // },
   },
 });
 
@@ -101,17 +62,8 @@ export const {
   setRole,
   openAsideEditor,
   closeAsideEditor,
-  addDefaultElement,
-  setEditorText,
-  setEditorImage,
-  setEditorList,
-  removeEditorItem,
-  savePage,
-  resetChanges,
   openPreview,
   closePreview,
-  setArticleDate,
-  setArticleTitle,
-  setArticleImg,
-  setImageRotation,
+  toggleGalleryPopup,
+  toggleAsideNav,
 } = appSlice.actions;
