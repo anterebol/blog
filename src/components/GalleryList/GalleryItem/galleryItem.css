@@ -1,0 +1,134 @@
+.gallery-list {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  gap: 10px 10px;
+  width: 100%;
+}
+.gallery-item {
+  position: relative;
+  border-radius: 10px; 
+  width: 100%;
+  height: 500px;
+  max-height: 190px;
+  overflow: hidden;
+}
+.gallery-item__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  border-radius: 10px;
+  filter: saturate(115%) drop-shadow(1px 1px 5px black);
+  display: grid;
+}
+.gallery-item__cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(230, 115, 74);
+  opacity: 0;
+  z-index: 3;
+  transition: ease .5s;
+  border-radius: 10px;
+}
+.gallery-item__expand {
+  align-self: center;
+  justify-self: center;
+  transition: ease .5s;
+  z-index: 4;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+.gallery-item__link:hover .gallery-item__expand {
+  opacity: .8;
+  width: 50px;
+  height: 50px;
+}
+.gallery-item__link:hover .gallery-item__cover {
+  opacity: .6;
+}
+.gallery-item__cover-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 5px;
+  box-sizing: content-box;
+  padding-left: 10px ;
+  opacity: 0;
+  transition: ease .5s;
+  z-index: 4;
+  font-size: 12px;
+  border-radius: 0 0 10px 10px;
+}
+.gallery-item__link:hover .gallery-item__cover-text {
+  opacity: .9;
+}
+.gallery-item__form {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(126, 124, 124);
+  /* padding-top: 20px; */
+}
+.gallery-item__form form {
+  width: 100%;
+}
+.gallery-item__input {
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin-top: 10px;
+  width: 80%;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+}
+@media (max-width: 1160px) {
+  .gallery-list {
+    /* margin: 0 10px; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-item {
+    max-height: 300px;
+  }
+}
+@media (max-width: 900px) {
+  .gallery-list {
+    display: block;
+  }
+  .gallery-item {
+    max-height: 450px;
+    max-width: 700px;
+    margin: 20px auto;
+  }
+}
+@media (max-width: 700px) {
+  .gallery-item {
+    max-height: 300px;
+    width: 95%;
+    max-width: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .main-section {
+    margin: 0 auto;
+  }
+  .gallery-list {
+    margin: 0 auto;
+  }
+  .gallery-item {
+    max-height: 220px;
+    max-width: 350px;
+    margin: 10px auto;
+  }
+}
