@@ -9,6 +9,7 @@ export const Button = ({
   text,
   src,
   children,
+  isDisabled,
 }: ButtonType) => {
   return (
     <button
@@ -18,6 +19,7 @@ export const Button = ({
         e.stopPropagation();
         func();
       }}
+      disabled={isDisabled}
       title={title}
     >
       {text || (src ? <img src={src} alt={title} /> : null)}

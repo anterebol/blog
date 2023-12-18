@@ -3,6 +3,12 @@
   padding: 5px 10px;
   border-radius: 5px;
 }
+.big {
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
 .save-button {
   color: white;
   background: rgb(20, 104, 200);
@@ -29,20 +35,36 @@
 .add-list-item:hover {
   opacity: 1;
 }
-.edit-button {
+.header-editor__article-button {
   width: 30px;
   height: 30px;
   position: absolute;
-  right: 5px;
   top: 8px;
   z-index: 1;
+  opacity: 1;
   border-radius: 10px;
   padding: 5px;
+  transition: ease .5s;
   box-sizing: content-box;
   background: white;
+  right: 8px;
 }
-.edit-button:hover {
-  background: white;
+.header-editor__article-button:hover {
+  opacity: .6;
+}
+.right-button {
+  right: 5px;
+}
+.left-button {
+  right: 50px;
+}
+
+.rotate-button > img {
+  transition: ease .5s;
+  transform: rotate(0deg);
+}
+.rotate-button:hover > img {
+  transform: rotate(-90deg);
 }
 .add-element {
   width: 25px;
@@ -55,4 +77,16 @@
 .remove-button {
   width: 25px;
   height: 25px;
+}
+.cancel, .confirm {
+  width: 70px;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.cancel {
+  background: rgb(241, 151, 6);
+}
+.confirm {
+  background: rgb(226, 63, 9);
 }
