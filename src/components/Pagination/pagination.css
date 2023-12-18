@@ -1,0 +1,31 @@
+.pagination {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.pagination__item {
+  width: 40px;
+  height: 40px;
+  background: orange;
+  color: white;
+  border-radius: 5px;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  transition: ease .5s;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: .6;
+}
+.pagination__item:hover {
+  opacity: 1;
+}
+.pagination__item.active {
+  opacity: 1;
+}
+.pagination__item:disabled {
+  background: gainsboro;
+}
