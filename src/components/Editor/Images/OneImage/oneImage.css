@@ -1,0 +1,8 @@
+.article-main-img.horizontal {
+  max-width: 780px;
+  max-height: 560px;
+}
+.article-main-img.vertical {
+  max-width: 375px;
+  height: 600px;
+}

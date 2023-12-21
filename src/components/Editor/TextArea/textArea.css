@@ -1,0 +1,6 @@
+textarea {
+  width: 100%;
+  border-bottom: .5px solid rgb(143, 142, 142);
+  overflow: hidden;
+  background: none;
+}

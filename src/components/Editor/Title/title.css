@@ -1,0 +1,60 @@
+.editor-header__container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.editor-header__container > input {
+  width: 100%;
+  text-align: left;
+}
+.h1  {
+  font-size: 35px;
+}
+.h2 {
+  font-size: 26px;
+}
+.h3  {
+  font-size: 24px;
+}
+.h5 {
+  font-size: 19px;
+}
+.h1 > input {
+  font-size: 35px;
+}
+.h2 > input {
+  font-size: 26px;
+}
+.h3 > input {
+  font-size: 24px;
+}
+.h5 > input {
+  font-size: 19px;
+}
+@media (max-width: 800px) {
+  .h1  {
+    font-size: 28px;
+  }
+  .h2 {
+    font-size: 24px;
+  }
+  .h3  {
+    font-size: 19px;
+  }
+  .h5 {
+    font-size: 17px;
+  }
+  .h1 > input {
+    font-size: 28px;
+  }
+  .h2 > input {
+    font-size: 24px;
+  }
+  .h3 > input {
+    font-size: 19px;
+  }
+  .h5 > input {
+    font-size: 17px;
+  }
+}

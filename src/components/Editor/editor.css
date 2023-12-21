@@ -1,11 +1,31 @@
 .editor-container {
   width: 100%;
-  padding-left: 50px;
+  margin: 0 auto;
+  position: relative;
+}
+.editor__header {
+  position: fixed;
+  height: 30px;
+  right: 0;
+  padding: 20px 0px;
+  padding-right: 10px;
+  background: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 5px;
+}
+.editor__main {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 100%;
 }
 .add-element__button {
-  /* width: 500px; */
   padding: 10px 20px;
   margin: 0 auto;
+  margin-top: 30px;
   display: flex;
   border: 2px dashed rgb(17, 69, 133);
   color: rgb(17, 69, 133);
@@ -13,7 +33,7 @@
   align-items: center;
   cursor: pointer;
   gap: 10px;
-  font-size: 22px;
+  font-size: 22px !important;
   text-transform: uppercase;
   background: white;
   transition: ease 1s;
@@ -28,4 +48,7 @@
 .add-element__button div img {
   width: 100%;
   height: 100%;
+}
+.add-element__button p {
+  font-size: 22px;
 }

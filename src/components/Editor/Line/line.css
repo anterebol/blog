@@ -1,0 +1,7 @@
+.blog-line {
+  width: 70%;
+  height: 1.5px;
+  background: orange;
+  opacity: 1;
+  margin: 10px auto;
+}

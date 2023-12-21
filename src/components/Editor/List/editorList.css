@@ -1,0 +1,46 @@
+.editor-list {
+  margin: 0 5px;
+}
+.editor-list > li {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  /* height: 16px; */
+}
+.editor-list > li:hover {
+  background: gainsboro;
+}
+.editor-list > li:hover > textarea {
+  background: gainsboro;
+}
+.editor-list__button {
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+  background: none;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.editor-list__button.add {
+  border: 1px solid #47A9F8;
+  color: #47A9F8;
+}
+.editor-list__button.add:hover {
+  background: rgb(178, 209, 247);
+}
+.editor-list__button.remove {
+  border: 1px solid #f86747;
+  color: #f86747;
+}
+.editor-list__button.remove:hover {
+  background: rgb(234, 200, 186);
+}
+.list-circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: black;
+  margin-right: 5px;
+}
