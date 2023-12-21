@@ -71,7 +71,7 @@ header {
   position: relative;
 }
 
-.nav-btn {
+.toggle__button.nav-btn {
   position: static;
   background: none;
   border-radius: 50%;
@@ -81,15 +81,23 @@ header {
 }
 .nav-btn > .toggle__button-line {
   position:static;
+  transition: ease .5s;
 }
-.nav-btn:hover {
-  opacity: .9;
+.toggle__button.nav-btn:hover {
+  opacity: 1;
+}
+.toggle__button.nav-btn > .toggle__button-line.line-2 {
+  position: relative;
+  left: 0px;
+}
+.toggle__button.nav-btn.open-aside > .toggle__button-line.line-2 {
+  left: -10px;
 }
 @media (max-width: 1000px) {
   .header__nav {
     display: none;
   }
-  .nav-btn {
+  .toggle__button.nav-btn {
     display: block;
   }
   .nav-btn > div {

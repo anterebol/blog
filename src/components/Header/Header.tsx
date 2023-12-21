@@ -6,7 +6,7 @@ import logo from '../../assets/tent.png';
 import { MAIN } from '../../constants/pathes/navPathes';
 import { ADMIN } from '../../constants/pathes/admin-pathes';
 import { ToggleButton } from '../Buttons/ToggleButton/ToggleButton';
-import { useAppDispatch } from '../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { toggleAsideNav } from '../../store/appReducer/appReducer';
 import { SideNav } from '../SideNav/SideNav';
 import { joinClasses } from '../../utils/joinClasses';
@@ -24,10 +24,12 @@ const additionalHeaderClass = (page: string) => {
 
 export const Header = () => {
   const dispatch = useAppDispatch();
+  const { openedAsideNav } = useAppSelector((state) => state.appReducer);
   const { pathname } = useLocation();
 
   return (
     <header
+      id="header"
       className={joinClasses(['header', additionalHeaderClass(pathname)])}
     >
       <div className="header__container">
@@ -40,7 +42,11 @@ export const Header = () => {
           func={() => {
             dispatch(toggleAsideNav());
           }}
-          cls={['toggle__button', 'nav-btn']}
+          cls={[
+            'toggle__button',
+            'nav-btn',
+            openedAsideNav ? 'open-aside' : '',
+          ]}
         />
       </div>
       <SideNav />

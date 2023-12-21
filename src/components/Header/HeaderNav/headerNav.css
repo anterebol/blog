@@ -1,14 +1,16 @@
-.header__nav {
-  max-width: 70%;
-}
+
 .nav {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   list-style: none;
   gap: 15px;
 }
 .nav__item {
   position: relative;
+}
+.header__link {
+  font-size: 16px;
 }
 .nav__item-line {
   height: 2px;
@@ -39,4 +41,20 @@
 .header__admin .header__link, .header__main .header__link {
   transition: none;
   color: black;
+}
+@media (max-width: 500px) {
+  .nav {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+  .nav__item {
+    padding: 5px;
+    width: 80%;
+    text-align: center;
+  }
+  .side-nav.opened {
+    height: initial;
+  }
 }
