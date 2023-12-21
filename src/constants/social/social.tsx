@@ -1,10 +1,10 @@
-import { FaInstagram, FaLinkedin, FaFacebookF } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 export const socialLinks = {
-  facebook: {
-    link: 'https://www.facebook.com/aleksey.festern/',
-    icon: <FaFacebookF />,
+  gitHub: {
+    link: 'https://github.com/anterebol',
+    icon: <FaGithub />,
   },
   instagram: {
     link: 'https://www.instagram.com/alex_festern/',
