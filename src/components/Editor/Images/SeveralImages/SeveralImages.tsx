@@ -16,6 +16,7 @@ export const SeveralImages = ({ id, list }: ImagesType) => {
     (state) => state.apiReducer.currentArticle
   );
   const images = list || article[index]?.ul || [];
+  const text = article[index].text || '';
   const tag = article[index]?.tag;
 
   return (
@@ -56,7 +57,11 @@ export const SeveralImages = ({ id, list }: ImagesType) => {
                           rotation: rotation || 'horizontal',
                         };
                         dispatch(
-                          setEditorList({ index, list: [...imagesSrc] })
+                          setEditorList({
+                            index,
+                            list: [...imagesSrc],
+                            text,
+                          })
                         );
                       }}
                     />
@@ -65,7 +70,11 @@ export const SeveralImages = ({ id, list }: ImagesType) => {
                         const imagesSrc = [...images];
                         imagesSrc.splice(i, 1);
                         dispatch(
-                          setEditorList({ index, list: [...imagesSrc] })
+                          setEditorList({
+                            index,
+                            list: [...imagesSrc],
+                            text,
+                          })
                         );
                       }}
                       src={removeIcon}
@@ -89,7 +98,11 @@ export const SeveralImages = ({ id, list }: ImagesType) => {
                             rotation === 'vertical' ? 'horizontal' : 'vertical',
                         };
                         dispatch(
-                          setEditorList({ index, list: [...imagesSrc] })
+                          setEditorList({
+                            index,
+                            list: [...imagesSrc],
+                            text,
+                          })
                         );
                       }}
                     />
@@ -101,7 +114,13 @@ export const SeveralImages = ({ id, list }: ImagesType) => {
                         src: '',
                         rotation,
                       };
-                      dispatch(setEditorList({ index, list: [...imagesSrc] }));
+                      dispatch(
+                        setEditorList({
+                          index,
+                          list: [...imagesSrc],
+                          text,
+                        })
+                      );
                     }}
                     src={editIcon}
                     cls={['header-editor__article-button']}
@@ -114,6 +133,19 @@ export const SeveralImages = ({ id, list }: ImagesType) => {
           );
         })}
       </ul>
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => {
+          dispatch(
+            setEditorList({ index, list: [...images], text: e.target.value })
+          );
+        }}
+        placeholder="Write description"
+        className={['description-form__img', 'description-form__text'].join(
+          ' '
+        )}
+      />
     </div>
   );
 };

@@ -44,7 +44,7 @@ export const EditorElement = ({
 }: {
   tag: string;
   id: string;
-  list?: Array<string> | Array<{ src: string; rotation: string; }>;
+  list?: Array<string> | Array<{ src: string; rotation: string }>;
 }) => {
   const dispatch = useAppDispatch();
   const index = parseInt(id, 10);

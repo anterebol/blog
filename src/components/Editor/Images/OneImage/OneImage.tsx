@@ -11,7 +11,7 @@ import {
 export const OneImage = ({ id }: { id: string }) => {
   const dispatch = useAppDispatch();
   const index = parseInt(id, 10);
-  const { src, rotation } = useAppSelector(
+  const { src, rotation, text } = useAppSelector(
     (state) => state.apiReducer.currentArticle.article[index]
   );
 
@@ -29,7 +29,7 @@ export const OneImage = ({ id }: { id: string }) => {
             })
           );
         }}
-        placeholder="Main image link"
+        placeholder="Image link"
         className={['description-form__img', src ? 'hide' : ''].join(' ')}
       />
       {src ? (
@@ -58,6 +58,24 @@ export const OneImage = ({ id }: { id: string }) => {
             cls={['toggle__button', 'opened']}
           />
           <img src={src} alt="article-img" />
+          <input
+            type="text"
+            value={text}
+            onChange={(e) => {
+              dispatch(
+                setEditorImage({
+                  id: index,
+                  src,
+                  text: e.target.value,
+                  rotation: rotation || 'horizontal',
+                })
+              );
+            }}
+            placeholder="Write description"
+            className={['description-form__img', 'description-form__text'].join(
+              ' '
+            )}
+          />
         </div>
       ) : null}
     </>

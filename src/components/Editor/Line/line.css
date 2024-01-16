@@ -3,5 +3,8 @@
   height: 1.5px;
   background: orange;
   opacity: 1;
+  margin: 0 auto;
+}
+.editor__element > .blog-line {
   margin: 10px auto;
 }

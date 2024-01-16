@@ -1,3 +1,6 @@
+.editor__element > .article-main-img {
+  margin-bottom: 0;
+}
 .article-main-img.horizontal {
   max-width: 780px;
   max-height: 560px;
@@ -5,4 +8,21 @@
 .article-main-img.vertical {
   max-width: 375px;
   height: 600px;
+}
+input.description-form__text {
+  margin-top: 10px;
+}
+.margin-bottom-30 {
+  margin-bottom: 30px !important;
+}
+.description-form__text {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  opacity: .8;
+  font-style: italic;
+  margin-top: 5px;
+}
+.description-form__text::placeholder {
+  text-align: center;
 }

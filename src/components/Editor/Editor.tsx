@@ -23,6 +23,7 @@ import { ModalPreview } from '../ModalPreview/ModalPreview';
 import { getArticle, setPage } from '../../store/apiReducer/api/api';
 import { resetChanges, setEditorPage } from '../../store/apiReducer/apiReducer';
 import { ExitModal } from './ExitModal/ExitModal';
+import { UpButton } from '../Buttons/UpPutton/UpButton';
 
 const PAGE = 'page';
 
@@ -163,6 +164,7 @@ export const Editor = () => {
           <p>Add element</p>
         </button>
       </div>
+      <UpButton />
     </div>
   );
 };

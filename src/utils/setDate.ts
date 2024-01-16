@@ -6,6 +6,8 @@ export type DateType = {
   year: string;
 };
 export const setDate = (date: DateType) =>
-  `${date.month.includes('Month') ? 'Month' : months[date.month]} ${
-    date.day
-  }, ${date.year}`;
+  date
+    ? `${date.month.includes('Month') ? 'Month' : months[date.month]} ${
+        date.day
+      }, ${date.year}`
+    : '';

@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px 5%;
-  margin: 10px auto;
+  margin: 0px auto;
   justify-content: center;
 }
 .several-images__list.editor {
